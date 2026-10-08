@@ -1,0 +1,159 @@
+{
+  "_instructions": "Held-out queries for evaluate_search.py --queries. Write them without looking at the fallback parser's patterns. Each entry needs \"query\" and \"expected\"; expected fields you leave out default to empty/null. diet is one of vegetarian, vegan, gluten-free, dairy-free, nut-free, low-carb, keto, or null. max_minutes is total time in minutes, or null. The \"_example\" entry is not evaluated.",
+  "_example": {
+    "query": "something warm with sweet potatoes for a vegan dinner, about an hour",
+    "expected": {
+      "free_text": "warm dinner",
+      "include_ingredients": [
+        "sweet potatoes"
+      ],
+      "exclude_ingredients": [],
+      "diet": "vegan",
+      "max_minutes": 60
+    }
+  },
+  "queries": [
+    {
+      "query": "quick weeknight dinner with chicken thighs, nothing over 40 min",
+      "expected": {
+        "free_text": "weeknight dinner",
+        "include_ingredients": [
+          "chicken thigh"
+        ],
+        "max_minutes": 40
+      }
+    },
+    {
+      "query": "i'm vegetarian and hate mushrooms, want something cozy for a rainy day",
+      "expected": {
+        "free_text": "cozy",
+        "diet": "vegetarian",
+        "exclude_ingredients": [
+          "mushroom"
+        ]
+      }
+    },
+    {
+      "query": "dessert my celiac friend can eat",
+      "expected": {
+        "free_text": "dessert",
+        "diet": "gluten-free"
+      }
+    },
+    {
+      "query": "something with the leftover rice and eggs in my fridge",
+      "expected": {
+        "include_ingredients": [
+          "rice",
+          "egg"
+        ]
+      }
+    },
+    {
+      "query": "lunch ideas without dairy that take half an hour or less",
+      "expected": {
+        "free_text": "lunch",
+        "diet": "dairy-free",
+        "max_minutes": 30
+      }
+    },
+    {
+      "query": "spicy vegan curry, no coconut",
+      "expected": {
+        "free_text": "spicy curry",
+        "diet": "vegan",
+        "exclude_ingredients": [
+          "coconut"
+        ]
+      }
+    },
+    {
+      "query": "kid-friendly pasta, my son is allergic to peanuts",
+      "expected": {
+        "free_text": "kid-friendly pasta",
+        "diet": "nut-free",
+        "exclude_ingredients": [
+          "peanut"
+        ]
+      }
+    },
+    {
+      "query": "salmon recipe under an hour",
+      "expected": {
+        "include_ingredients": [
+          "salmon"
+        ],
+        "max_minutes": 60
+      }
+    },
+    {
+      "query": "low carb breakfast w/ eggs + spinach",
+      "expected": {
+        "free_text": "breakfast",
+        "diet": "low-carb",
+        "include_ingredients": [
+          "egg",
+          "spinach"
+        ]
+      }
+    },
+    {
+      "query": "easy soup, skip the onions and garlic",
+      "expected": {
+        "free_text": "easy soup",
+        "exclude_ingredients": [
+          "onion",
+          "garlic"
+        ]
+      }
+    },
+    {
+      "query": "keto dinner that isn't chicken again",
+      "expected": {
+        "free_text": "dinner",
+        "diet": "low-carb",
+        "exclude_ingredients": [
+          "chicken"
+        ]
+      }
+    },
+    {
+      "query": "need a 20 min snack with chickpeas",
+      "expected": {
+        "free_text": "snack",
+        "include_ingredients": [
+          "chickpea"
+        ],
+        "max_minutes": 20
+      }
+    },
+    {
+      "query": "plant based tacos",
+      "expected": {
+        "free_text": "tacos",
+        "diet": "vegan"
+      }
+    },
+    {
+      "query": "cookies but no eggs and no nuts",
+      "expected": {
+        "free_text": "cookies",
+        "diet": "nut-free",
+        "exclude_ingredients": [
+          "egg"
+        ]
+      }
+    },
+    {
+      "query": "something light with zucchini or eggplant, maybe 25 minutes tops",
+      "expected": {
+        "free_text": "light",
+        "include_ingredients": [
+          "zucchini",
+          "eggplant"
+        ],
+        "max_minutes": 25
+      }
+    }
+  ]
+}

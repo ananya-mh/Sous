@@ -1,0 +1,11 @@
+.env
+.venv/
+__pycache__/
+.pytest_cache/
+data/
+bert_recipe_model/
+runs/
+.DS_Store
+colab_bundle.zip
+original/
+fixed/

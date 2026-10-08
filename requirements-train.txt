@@ -1,0 +1,5 @@
+# Extra dependencies for scripts/train_bert_colab.py and scripts/evaluate_gold.py.
+# torch is not pinned on purpose: use the CUDA build that Colab ships with.
+# Every package here ships a wheel, so nothing is built from source (setup.py) on install.
+transformers==4.57.6
+accelerate==1.15.0

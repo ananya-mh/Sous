@@ -1,0 +1,169 @@
+{
+  "label_mode": "original",
+  "base_model": "bert-base-uncased",
+  "hyperparameters": {
+    "epochs": 5,
+    "batch_size": 16,
+    "lr": 2e-05,
+    "weight_decay": 0.01,
+    "seed": 42,
+    "early_stopping_patience": 2
+  },
+  "data": {
+    "sentences_raw": 178668,
+    "sentences_unique": 85319,
+    "train_size": 68255,
+    "val_size": 8531,
+    "test_size": 8533,
+    "train_sentences_relabeled": 0,
+    "max_samples": null
+  },
+  "best_val_entity_f1": 0.8879336259243672,
+  "test": {
+    "vs_original_labels": {
+      "entity_level": {
+        "AMT": {
+          "precision": 0.9999065507896459,
+          "recall": 0.9991595853954618,
+          "f1-score": 0.9995329285380664,
+          "support": 10709.0
+        },
+        "DESC": {
+          "precision": 0.7844689056725053,
+          "recall": 0.938392041904945,
+          "f1-score": 0.8545546049320585,
+          "support": 20809.0
+        },
+        "NAME": {
+          "precision": 0.7811927539181762,
+          "recall": 0.7570766347766051,
+          "f1-score": 0.768945654896068,
+          "support": 10139.0
+        },
+        "UNIT": {
+          "precision": 0.9991213940547664,
+          "recall": 0.9988288683940858,
+          "f1-score": 0.9989751098096632,
+          "support": 6831.0
+        },
+        "micro avg": {
+          "precision": 0.8560327668044709,
+          "recall": 0.9224137931034483,
+          "f1-score": 0.8879844345616263,
+          "support": 48488.0
+        },
+        "macro avg": {
+          "precision": 0.8911724011087734,
+          "recall": 0.9233642826177744,
+          "f1-score": 0.905502074543964,
+          "support": 48488.0
+        },
+        "weighted avg": {
+          "precision": 0.8616054340313063,
+          "recall": 0.9224137931034483,
+          "f1-score": 0.8890192186901171,
+          "support": 48488.0
+        }
+      },
+      "token_level": {
+        "AMT": {
+          "precision": 0.9999065507896459,
+          "recall": 0.9991595853954618,
+          "f1-score": 0.9995329285380664,
+          "support": 10709
+        },
+        "UNIT": {
+          "precision": 0.9991213940547664,
+          "recall": 0.9988288683940858,
+          "f1-score": 0.9989751098096632,
+          "support": 6831
+        },
+        "NAME": {
+          "precision": 0.9214170475934391,
+          "recall": 0.8301738235115983,
+          "f1-score": 0.8734189314047217,
+          "support": 16511
+        },
+        "DESC": {
+          "precision": 0.7844689056725053,
+          "recall": 0.938392041904945,
+          "f1-score": 0.8545546049320585,
+          "support": 20809
+        }
+      }
+    },
+    "vs_fixed_labels": {
+      "entity_level": {
+        "AMT": {
+          "precision": 0.7786188206709653,
+          "recall": 0.8773296830578077,
+          "f1-score": 0.8250321814040994,
+          "support": 9497.0
+        },
+        "DESC": {
+          "precision": 0.28924955809095293,
+          "recall": 0.5838469023678236,
+          "f1-score": 0.38684719535783363,
+          "support": 12332.0
+        },
+        "NAME": {
+          "precision": 0.7630775493588439,
+          "recall": 0.751905334937826,
+          "f1-score": 0.7574502474997474,
+          "support": 9972.0
+        },
+        "UNIT": {
+          "precision": 0.9991213940547664,
+          "recall": 0.9988288683940858,
+          "f1-score": 0.9989751098096632,
+          "support": 6831.0
+        },
+        "micro avg": {
+          "precision": 0.5713711529627928,
+          "recall": 0.7727531580037275,
+          "f1-score": 0.6569762323943661,
+          "support": 38632.0
+        },
+        "macro avg": {
+          "precision": 0.7075168305438821,
+          "recall": 0.8029776971893857,
+          "f1-score": 0.7420761835178359,
+          "support": 38632.0
+        },
+        "weighted avg": {
+          "precision": 0.6573818610293096,
+          "recall": 0.7727531580037275,
+          "f1-score": 0.6984681891469462,
+          "support": 38632.0
+        }
+      },
+      "token_level": {
+        "AMT": {
+          "precision": 0.9999065507896459,
+          "recall": 0.9610202981857374,
+          "f1-score": 0.9800778566521641,
+          "support": 11134
+        },
+        "UNIT": {
+          "precision": 0.9991213940547664,
+          "recall": 0.9988288683940858,
+          "f1-score": 0.9989751098096632,
+          "support": 6831
+        },
+        "NAME": {
+          "precision": 0.9027964506587792,
+          "recall": 0.8403203604054561,
+          "f1-score": 0.8704387841078488,
+          "support": 15982
+        },
+        "DESC": {
+          "precision": 0.7293909689860196,
+          "recall": 0.9407741333747862,
+          "f1-score": 0.8217057771944513,
+          "support": 19299
+        }
+      }
+    }
+  },
+  "note": "Test labels are rule-generated; use evaluate_gold.py on the hand-corrected gold set to compare runs against human labels."
+}

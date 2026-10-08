@@ -1,0 +1,609 @@
+# Sous NER gold set (nyt). Pre-labeled by rules: correct every label by hand.
+# One "token<TAB>label" per line (tabs or spaces), blank line between sentences.
+# Labels: O B-AMT I-AMT B-UNIT I-UNIT B-NAME I-NAME B-DESC I-DESC
+# Conventions: one span per mixed number or range ("1 1/2", "2 to 3"); NAME is the item you
+#   buy ("olive oil"); DESC is prep/state/size ("finely chopped"); punctuation and filler are O.
+# Change "# reviewed: no" to "# reviewed: yes" once a sentence is checked.
+# You may split or merge token lines if the tokenization itself is wrong.
+
+# id: nyt-0001
+# text: 1/4 cup pistachios , coarsely chopped ( 30 grams )
+# reviewed: no
+1/4             	B-AMT
+cup             	B-UNIT
+pistachios      	B-NAME
+,               	O
+coarsely        	O
+chopped         	O
+(               	O
+30              	B-AMT
+grams           	B-UNIT
+)               	O
+
+# id: nyt-0002
+# text: 4 ounces olive oil
+# reviewed: no
+4               	B-AMT
+ounces          	B-UNIT
+olive           	B-NAME
+oil             	I-NAME
+
+# id: nyt-0003
+# text: 8 chanterelle mushrooms , quartered and sauteed
+# reviewed: no
+8               	B-AMT
+chanterelle     	B-DESC
+mushrooms       	B-NAME
+,               	O
+quartered       	B-DESC
+and             	O
+sauteed         	B-DESC
+
+# id: nyt-0004
+# text: 8 asparagus spears , sliced on the bias into one-inch pieces
+# reviewed: no
+8               	B-AMT
+asparagus       	B-NAME
+spears          	I-NAME
+,               	O
+sliced          	B-DESC
+on              	I-DESC
+the             	I-DESC
+bias            	I-DESC
+into            	O
+one-inch        	B-DESC
+pieces          	I-DESC
+
+# id: nyt-0005
+# text: 1 onion , stuck with cloves
+# reviewed: no
+1               	B-AMT
+onion           	B-NAME
+,               	O
+stuck           	B-DESC
+with            	O
+cloves          	B-UNIT
+
+# id: nyt-0006
+# text: 1 1/2 cups yogurt cheese
+# reviewed: no
+1               	B-AMT
+1/2             	I-AMT
+cups            	B-UNIT
+yogurt          	B-NAME
+cheese          	I-NAME
+
+# id: nyt-0007
+# text: 1 1/2 cups seeded watermelon , cut into 1/4-inch dice
+# reviewed: no
+1               	B-AMT
+1/2             	I-AMT
+cups            	B-UNIT
+seeded          	B-DESC
+watermelon      	B-NAME
+,               	O
+cut             	B-DESC
+into            	O
+1/4-inch        	B-DESC
+dice            	I-DESC
+
+# id: nyt-0008
+# text: 1 tablespoon chopped fresh basil ( more to taste )
+# reviewed: no
+1               	B-AMT
+tablespoon      	B-UNIT
+chopped         	O
+fresh           	O
+basil           	B-NAME
+(               	O
+more            	O
+to              	O
+taste           	O
+)               	O
+
+# id: nyt-0009
+# text: 2 teaspoons hot pepper sauce
+# reviewed: no
+2               	B-AMT
+teaspoons       	B-UNIT
+hot             	B-DESC
+pepper          	B-NAME
+sauce           	I-NAME
+
+# id: nyt-0010
+# text: 2 jalapeño or serrano peppers , minced
+# reviewed: no
+2               	B-AMT
+jalapeño        	B-NAME
+or              	O
+serrano         	O
+peppers         	O
+,               	O
+minced          	O
+
+# id: nyt-0011
+# text: Dash of orange bitters , preferably Regan ’ s Orange Bitters No . 6
+# reviewed: no
+Dash            	B-UNIT
+of              	O
+orange          	B-NAME
+bitters         	I-NAME
+,               	O
+preferably      	B-DESC
+Regan           	I-DESC
+’               	O
+s               	B-NAME
+Orange          	I-NAME
+Bitters         	I-NAME
+No              	B-DESC
+.               	O
+6               	B-AMT
+
+# id: nyt-0012
+# text: 1/2 cup dried porcinis , optional
+# reviewed: no
+1/2             	B-AMT
+cup             	B-UNIT
+dried           	B-NAME
+porcinis        	I-NAME
+,               	O
+optional        	B-NAME
+
+# id: nyt-0013
+# text: 1 tablespoon rose water ( see Note )
+# reviewed: no
+1               	B-AMT
+tablespoon      	B-UNIT
+rose            	B-NAME
+water           	I-NAME
+(               	O
+see             	O
+Note            	O
+)               	O
+
+# id: nyt-0014
+# text: cooked\nrice
+# reviewed: no
+cooked\nrice    	O
+
+# id: nyt-0015
+# text: 1 pound imported Italian Arborio rice
+# reviewed: no
+1               	B-AMT
+pound           	B-UNIT
+imported        	B-DESC
+Italian         	I-DESC
+Arborio         	I-DESC
+rice            	B-NAME
+
+# id: nyt-0016
+# text: 8 to 9 ounces French or Italian bread
+# reviewed: no
+8               	B-AMT
+to              	I-AMT
+9               	I-AMT
+ounces          	B-UNIT
+French          	B-DESC
+or              	O
+Italian         	B-DESC
+bread           	B-NAME
+
+# id: nyt-0017
+# text: Extra virgin olive oil for the pan
+# reviewed: no
+Extra           	B-NAME
+virgin          	I-NAME
+olive           	I-NAME
+oil             	I-NAME
+for             	B-DESC
+the             	I-DESC
+pan             	I-DESC
+
+# id: nyt-0018
+# text: 1 apple , quartered
+# reviewed: no
+1               	B-AMT
+apple           	B-NAME
+,               	O
+quartered       	B-DESC
+
+# id: nyt-0019
+# text: 1 peeled and chopped\nonion
+# reviewed: no
+1               	B-AMT
+peeled          	O
+and             	O
+chopped\nonion  	O
+
+# id: nyt-0020
+# text: 1/3 to 1/2 cup freshly grated Parmesan
+# reviewed: no
+1/3             	B-AMT
+to              	I-AMT
+1/2             	I-AMT
+cup             	B-UNIT
+freshly         	B-NAME
+grated          	I-NAME
+Parmesan        	I-NAME
+
+# id: nyt-0021
+# text: 1 link kielbasa or Polish sausage , about 1 1/4 pounds
+# reviewed: no
+1               	B-AMT
+link            	O
+kielbasa        	B-DESC
+or              	O
+Polish          	B-DESC
+sausage         	B-NAME
+,               	O
+about           	B-DESC
+1               	B-AMT
+1/4             	I-AMT
+pounds          	B-UNIT
+
+# id: nyt-0022
+# text: 1 pound Yukon gold potatoes , peeled and cut in half
+# reviewed: no
+1               	B-AMT
+pound           	B-UNIT
+Yukon           	B-NAME
+gold            	I-NAME
+potatoes        	I-NAME
+,               	O
+peeled          	B-DESC
+and             	O
+cut             	B-DESC
+in              	I-DESC
+half            	I-DESC
+
+# id: nyt-0023
+# text: 2 garlic cloves , peeled
+# reviewed: no
+2               	B-AMT
+garlic          	B-NAME
+cloves          	B-UNIT
+,               	O
+peeled          	B-DESC
+
+# id: nyt-0024
+# text: 2 medium carrots , peeled and quartered
+# reviewed: no
+2               	B-AMT
+medium          	B-DESC
+carrots         	B-NAME
+,               	O
+peeled          	B-DESC
+and             	O
+quartered       	B-DESC
+
+# id: nyt-0025
+# text: Jelly beans or marshmallow chicks and rabbits for decoration
+# reviewed: no
+Jelly           	B-NAME
+beans           	I-NAME
+or              	O
+marshmallow     	B-DESC
+chicks          	I-DESC
+and             	O
+rabbits         	B-DESC
+for             	I-DESC
+decoration      	I-DESC
+
+# id: nyt-0026
+# text: 1 large , ripe tomato , peeled , seeded and chopped
+# reviewed: no
+1               	B-AMT
+large           	B-DESC
+,               	O
+ripe            	B-DESC
+tomato          	B-NAME
+,               	O
+peeled          	B-DESC
+,               	O
+seeded          	B-DESC
+and             	O
+chopped         	B-DESC
+
+# id: nyt-0027
+# text: 2 tablespoons toasted sesame seeds ( optional )
+# reviewed: no
+2               	B-AMT
+tablespoons     	B-UNIT
+toasted         	B-DESC
+sesame          	B-NAME
+seeds           	I-NAME
+(               	O
+optional        	B-DESC
+)               	O
+
+# id: nyt-0028
+# text: 1 cup raspberries
+# reviewed: no
+1               	B-AMT
+cup             	B-UNIT
+raspberries     	B-NAME
+
+# id: nyt-0029
+# text: 1 cup apple juice
+# reviewed: no
+1               	B-AMT
+cup             	B-UNIT
+apple           	B-NAME
+juice           	I-NAME
+
+# id: nyt-0030
+# text: 3 pounds chicken thighs , 6 to 8 pieces , patted dry
+# reviewed: no
+3               	B-AMT
+pounds          	B-UNIT
+chicken         	B-NAME
+thighs          	I-NAME
+,               	O
+6               	B-AMT
+to              	I-AMT
+8               	I-AMT
+pieces          	B-DESC
+,               	O
+patted          	B-DESC
+dry             	I-DESC
+
+# id: nyt-0031
+# text: Scallions , small romaine lettuce leaves , and lemon wedges for garnish
+# reviewed: no
+Scallions       	B-NAME
+,               	O
+small           	B-NAME
+romaine         	I-NAME
+lettuce         	I-NAME
+leaves          	I-NAME
+,               	O
+and             	O
+lemon           	B-NAME
+wedges          	I-NAME
+for             	I-NAME
+garnish         	I-NAME
+
+# id: nyt-0032
+# text: 3/4 cup plain yogurt , stirred
+# reviewed: no
+3/4             	B-AMT
+cup             	B-UNIT
+plain           	B-DESC
+yogurt          	B-NAME
+,               	O
+stirred         	B-DESC
+
+# id: nyt-0033
+# text: 1/4 cup crème de cassis liqueur
+# reviewed: no
+1/4             	B-AMT
+cup             	B-UNIT
+crème           	B-NAME
+de              	I-NAME
+cassis          	I-NAME
+liqueur         	I-NAME
+
+# id: nyt-0034
+# text: 1 1/2 pounds meaty wild mushrooms , like shiitake , cremini and portobello , or a combination of cultivated and wild mushrooms
+# reviewed: no
+1               	B-AMT
+1/2             	I-AMT
+pounds          	B-UNIT
+meaty           	B-DESC
+wild            	I-DESC
+mushrooms       	B-NAME
+,               	O
+like            	B-DESC
+shiitake        	I-DESC
+,               	O
+cremini         	B-DESC
+and             	O
+portobello      	B-DESC
+,               	O
+or              	O
+a               	B-DESC
+combination     	I-DESC
+of              	I-DESC
+cultivated      	I-DESC
+and             	O
+wild            	B-DESC
+mushrooms       	B-NAME
+
+# id: nyt-0035
+# text: 4 cups pecan halves
+# reviewed: no
+4               	B-AMT
+cups            	B-UNIT
+pecan           	B-NAME
+halves          	I-NAME
+
+# id: nyt-0036
+# text: 1 ounce feta cheese , crumbled
+# reviewed: no
+1               	B-AMT
+ounce           	B-UNIT
+feta            	B-NAME
+cheese          	I-NAME
+,               	O
+crumbled        	B-NAME
+
+# id: nyt-0037
+# text: 1 sweet red pepper
+# reviewed: no
+1               	B-AMT
+sweet           	B-DESC
+red             	B-NAME
+pepper          	I-NAME
+
+# id: nyt-0038
+# text: 2 cups shredded leftover turkey ( optional )
+# reviewed: no
+2               	B-AMT
+cups            	B-UNIT
+shredded        	B-DESC
+leftover        	B-NAME
+turkey          	I-NAME
+(               	O
+optional        	B-DESC
+)               	O
+
+# id: nyt-0039
+# text: 2 tablespoons walnut oil , more for drizzling
+# reviewed: no
+2               	B-AMT
+tablespoons     	B-UNIT
+walnut          	B-NAME
+oil             	I-NAME
+,               	O
+more            	B-DESC
+for             	I-DESC
+drizzling       	I-DESC
+
+# id: nyt-0040
+# text: 1 heaping teaspoon minced fresh mint
+# reviewed: no
+1               	B-AMT
+heaping         	O
+teaspoon        	B-UNIT
+minced          	B-NAME
+fresh           	I-NAME
+mint            	I-NAME
+
+# id: nyt-0041
+# text: 4 ounces/1 stick/112 grams unsalted butter , at room temperature
+# reviewed: no
+4               	B-AMT
+ounces/1        	O
+stick/112       	B-DESC
+grams           	B-UNIT
+unsalted        	B-NAME
+butter          	I-NAME
+,               	O
+at              	B-DESC
+room            	I-DESC
+temperature     	I-DESC
+
+# id: nyt-0042
+# text: 6 lamb shoulder chops , 10 to 12 ounces each
+# reviewed: no
+6               	B-AMT
+lamb            	B-NAME
+shoulder        	B-DESC
+chops           	I-DESC
+,               	O
+10              	B-AMT
+to              	I-AMT
+12              	I-AMT
+ounces          	B-UNIT
+each            	B-DESC
+
+# id: nyt-0043
+# text: 8 whole baby fennel bulbs , or 1 large bulb , halved , cored and sliced
+# reviewed: no
+8               	B-AMT
+whole           	B-NAME
+baby            	I-NAME
+fennel          	I-NAME
+bulbs           	I-NAME
+,               	O
+or              	O
+1               	B-AMT
+large           	B-DESC
+bulb            	B-NAME
+,               	O
+halved          	B-DESC
+,               	O
+cored           	B-DESC
+and             	O
+sliced          	B-DESC
+
+# id: nyt-0044
+# text: 1/3 cup mango chutney , big pieces chopped
+# reviewed: no
+1/3             	B-AMT
+cup             	B-UNIT
+mango           	B-NAME
+chutney         	I-NAME
+,               	O
+big             	B-NAME
+pieces          	I-NAME
+chopped         	I-NAME
+
+# id: nyt-0045
+# text: 24 oil-cured olives , pitted and coarsely chopped
+# reviewed: no
+24              	B-AMT
+oil-cured       	B-NAME
+olives          	I-NAME
+,               	O
+pitted          	B-DESC
+and             	O
+coarsely        	B-DESC
+chopped         	I-DESC
+
+# id: nyt-0046
+# text: 1 cup dry Marsala
+# reviewed: no
+1               	B-AMT
+cup             	B-UNIT
+dry             	B-DESC
+Marsala         	B-NAME
+
+# id: nyt-0047
+# text: 1 ( 15-ounce ) can kidney beans , drained
+# reviewed: no
+1               	B-AMT
+(               	O
+15-ounce        	O
+)               	O
+can             	B-UNIT
+kidney          	B-NAME
+beans           	I-NAME
+,               	O
+drained         	B-DESC
+
+# id: nyt-0048
+# text: 2 tablespoons ( 25 grams ) olive oil , plus an additional 2 tablespoons ( 25 grams ) for drizzling
+# reviewed: no
+2               	B-AMT
+tablespoons     	B-UNIT
+(               	O
+25              	B-AMT
+grams           	B-UNIT
+)               	O
+olive           	B-NAME
+oil             	I-NAME
+,               	O
+plus            	O
+an              	O
+additional      	O
+2               	B-AMT
+tablespoons     	B-UNIT
+(               	O
+25              	B-AMT
+grams           	B-UNIT
+)               	O
+for             	O
+drizzling       	O
+
+# id: nyt-0049
+# text: 3 tablespoons chopped walnuts ( about 1 1/2 ounces )
+# reviewed: no
+3               	B-AMT
+tablespoons     	B-UNIT
+chopped         	B-DESC
+walnuts         	B-NAME
+(               	O
+about           	B-DESC
+1               	B-AMT
+1/2             	I-AMT
+ounces          	B-UNIT
+)               	O
+
+# id: nyt-0050
+# text: 1/2 cup rolled oats
+# reviewed: no
+1/2             	B-AMT
+cup             	B-UNIT
+rolled          	B-DESC
+oats            	B-NAME

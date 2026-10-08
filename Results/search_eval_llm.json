@@ -1,0 +1,744 @@
+{
+  "parser": "llm",
+  "llm_model": "openai/gpt-oss-120b",
+  "query_file": null,
+  "summary": {
+    "queries": 10,
+    "results_returned": 50,
+    "result_slots": 50,
+    "hard_constraints_satisfied": 50,
+    "hard_constraint_rate": 1.0,
+    "include_queries": 6,
+    "include_results_returned": 30,
+    "include_all_present": 21,
+    "include_all_rate": 0.7,
+    "queries_parsed_correctly": 7,
+    "fallback_used": 0
+  },
+  "queries": [
+    {
+      "query": "vegetarian pasta under 30 minutes, no mushrooms",
+      "expected": {
+        "include_ingredients": [],
+        "exclude_ingredients": [
+          "mushrooms"
+        ],
+        "diet": "vegetarian",
+        "max_minutes": 30,
+        "free_text": "pasta"
+      },
+      "parsed": {
+        "include_ingredients": [],
+        "exclude_ingredients": [
+          "mushrooms"
+        ],
+        "diet": "vegetarian",
+        "max_minutes": 30,
+        "free_text": "pasta"
+      },
+      "parsed_by": "llm",
+      "parse_matches": {
+        "diet": true,
+        "max_minutes": true,
+        "exclude_ingredients": true
+      },
+      "candidates": 1619,
+      "results": [
+        {
+          "id": 496438,
+          "name": "Perfect Pasta",
+          "minutes": 30,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 520616,
+          "name": "Pasta \"al Dente\"",
+          "minutes": 20,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 292909,
+          "name": "Pasta With Asparagus",
+          "minutes": 25,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 10831,
+          "name": "Pasta Asciutta",
+          "minutes": 30,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 77694,
+          "name": "Pasta with no-cook Cream Sauce",
+          "minutes": 10,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        }
+      ]
+    },
+    {
+      "query": "quick vegan curry in under 45 minutes",
+      "expected": {
+        "include_ingredients": [],
+        "exclude_ingredients": [],
+        "diet": "vegan",
+        "max_minutes": 45,
+        "free_text": "curry"
+      },
+      "parsed": {
+        "include_ingredients": [],
+        "exclude_ingredients": [],
+        "diet": "vegan",
+        "max_minutes": 45,
+        "free_text": "quick curry"
+      },
+      "parsed_by": "llm",
+      "parse_matches": {
+        "diet": true,
+        "max_minutes": true,
+        "exclude_ingredients": true
+      },
+      "candidates": 140,
+      "results": [
+        {
+          "id": 474165,
+          "name": "Tho Ruung Red Curry Stir Fry",
+          "minutes": 35,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 532257,
+          "name": "Japanese Curry Powder",
+          "minutes": 5,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 15743,
+          "name": "Tehina (Sesame Sauce)",
+          "minutes": 5,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 137163,
+          "name": "Mustard Seed and Papaya Chutney",
+          "minutes": 30,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 126437,
+          "name": "Quick Kale Saute",
+          "minutes": 16,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        }
+      ]
+    },
+    {
+      "query": "gluten-free chocolate dessert",
+      "expected": {
+        "include_ingredients": [],
+        "exclude_ingredients": [],
+        "diet": "gluten-free",
+        "max_minutes": null,
+        "free_text": "chocolate dessert"
+      },
+      "parsed": {
+        "include_ingredients": [
+          "chocolate"
+        ],
+        "exclude_ingredients": [],
+        "diet": "gluten-free",
+        "max_minutes": null,
+        "free_text": "dessert"
+      },
+      "parsed_by": "llm",
+      "parse_matches": {
+        "diet": true,
+        "max_minutes": true,
+        "exclude_ingredients": true
+      },
+      "candidates": 2928,
+      "results": [
+        {
+          "id": 324393,
+          "name": "No-Machine Chocolate Ice Cream",
+          "minutes": 245,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 272879,
+          "name": "White Chocolate Frosting Recipe",
+          "minutes": 18,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 373528,
+          "name": "Soft and Gooey Chestnut and Chocolate Cake",
+          "minutes": 50,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 310617,
+          "name": "Rocky Road",
+          "minutes": 50,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 278654,
+          "name": "Creamy Chocolate Frosting",
+          "minutes": 50,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        }
+      ]
+    },
+    {
+      "query": "chicken dinner with no dairy",
+      "expected": {
+        "include_ingredients": [
+          "chicken"
+        ],
+        "exclude_ingredients": [],
+        "diet": "dairy-free",
+        "max_minutes": null,
+        "free_text": "dinner"
+      },
+      "parsed": {
+        "include_ingredients": [
+          "chicken"
+        ],
+        "exclude_ingredients": [
+          "dairy"
+        ],
+        "diet": "dairy-free",
+        "max_minutes": null,
+        "free_text": "dinner"
+      },
+      "parsed_by": "llm",
+      "parse_matches": {
+        "diet": true,
+        "max_minutes": true,
+        "exclude_ingredients": false
+      },
+      "candidates": 73,
+      "results": [
+        {
+          "id": 138365,
+          "name": "Chicken With Garlicky Potato Fans",
+          "minutes": 80,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 336077,
+          "name": "Island Chicken",
+          "minutes": 30,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 171562,
+          "name": "Grilled Chicken With Basil Dressing",
+          "minutes": 45,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 482240,
+          "name": "Red Chili and Lime Chicken",
+          "minutes": 20,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 414305,
+          "name": "World's Easiest Salsa Chicken",
+          "minutes": 45,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        }
+      ]
+    },
+    {
+      "query": "low-carb breakfast with eggs under 20 minutes",
+      "expected": {
+        "include_ingredients": [
+          "eggs"
+        ],
+        "exclude_ingredients": [],
+        "diet": "low-carb",
+        "max_minutes": 20,
+        "free_text": "breakfast"
+      },
+      "parsed": {
+        "include_ingredients": [
+          "eggs"
+        ],
+        "exclude_ingredients": [],
+        "diet": "low-carb",
+        "max_minutes": 20,
+        "free_text": "breakfast"
+      },
+      "parsed_by": "llm",
+      "parse_matches": {
+        "diet": true,
+        "max_minutes": true,
+        "exclude_ingredients": true
+      },
+      "candidates": 66,
+      "results": [
+        {
+          "id": 114996,
+          "name": "Scrambled Eggs With Avocado and Cheese",
+          "minutes": 20,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 354371,
+          "name": "Easter Hard Boiled Eggs",
+          "minutes": 12,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 15248,
+          "name": "Onion Cheese Omelet",
+          "minutes": 15,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 528930,
+          "name": "Perfect Microwave Poached Egg",
+          "minutes": 6,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 474356,
+          "name": "Healthy Veggie Scramble",
+          "minutes": 10,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        }
+      ]
+    },
+    {
+      "query": "nut-free cookies",
+      "expected": {
+        "include_ingredients": [],
+        "exclude_ingredients": [],
+        "diet": "nut-free",
+        "max_minutes": null,
+        "free_text": "cookies"
+      },
+      "parsed": {
+        "include_ingredients": [],
+        "exclude_ingredients": [
+          "nuts"
+        ],
+        "diet": "nut-free",
+        "max_minutes": null,
+        "free_text": "cookies"
+      },
+      "parsed_by": "llm",
+      "parse_matches": {
+        "diet": true,
+        "max_minutes": true,
+        "exclude_ingredients": false
+      },
+      "candidates": 4380,
+      "results": [
+        {
+          "id": 275912,
+          "name": "Latte Checkerboards ( Cookies )",
+          "minutes": 55,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 129888,
+          "name": "Out of This World Cookies",
+          "minutes": 70,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 1430,
+          "name": "Old Fashioned Butter Cookies",
+          "minutes": 7,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 394521,
+          "name": "Sugee Cookies ( Olive Oil )",
+          "minutes": 25,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 326613,
+          "name": "Lofthouse-Style Sugar Cookies",
+          "minutes": 30,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        }
+      ]
+    },
+    {
+      "query": "soup with lentils and carrots, no onions",
+      "expected": {
+        "include_ingredients": [
+          "lentils",
+          "carrots"
+        ],
+        "exclude_ingredients": [
+          "onions"
+        ],
+        "diet": null,
+        "max_minutes": null,
+        "free_text": "soup"
+      },
+      "parsed": {
+        "include_ingredients": [
+          "lentils",
+          "carrots"
+        ],
+        "exclude_ingredients": [
+          "onions"
+        ],
+        "diet": null,
+        "max_minutes": null,
+        "free_text": "soup"
+      },
+      "parsed_by": "llm",
+      "parse_matches": {
+        "diet": true,
+        "max_minutes": true,
+        "exclude_ingredients": true
+      },
+      "candidates": 3471,
+      "results": [
+        {
+          "id": 440583,
+          "name": "Chickpea and Greens Soup With Carrots",
+          "minutes": 30,
+          "violations": [],
+          "missing_ingredients": [
+            "lentils"
+          ],
+          "diet_notes": []
+        },
+        {
+          "id": 203969,
+          "name": "Spicy Lentil and Tomato Soup",
+          "minutes": 35,
+          "violations": [],
+          "missing_ingredients": [
+            "carrots"
+          ],
+          "diet_notes": []
+        },
+        {
+          "id": 195991,
+          "name": "Simple Vegetable Soup",
+          "minutes": 35,
+          "violations": [],
+          "missing_ingredients": [
+            "lentils"
+          ],
+          "diet_notes": []
+        },
+        {
+          "id": 340920,
+          "name": "Cream of Carrot Soup",
+          "minutes": 30,
+          "violations": [],
+          "missing_ingredients": [
+            "lentils"
+          ],
+          "diet_notes": []
+        },
+        {
+          "id": 424970,
+          "name": "Indian-Spiced Duck With Lentils",
+          "minutes": 54,
+          "violations": [],
+          "missing_ingredients": [
+            "carrots"
+          ],
+          "diet_notes": []
+        }
+      ]
+    },
+    {
+      "query": "salmon under 40 minutes without garlic",
+      "expected": {
+        "include_ingredients": [
+          "salmon"
+        ],
+        "exclude_ingredients": [
+          "garlic"
+        ],
+        "diet": null,
+        "max_minutes": 40,
+        "free_text": ""
+      },
+      "parsed": {
+        "include_ingredients": [
+          "salmon"
+        ],
+        "exclude_ingredients": [
+          "garlic"
+        ],
+        "diet": null,
+        "max_minutes": 40,
+        "free_text": ""
+      },
+      "parsed_by": "llm",
+      "parse_matches": {
+        "diet": true,
+        "max_minutes": true,
+        "exclude_ingredients": true
+      },
+      "candidates": 2095,
+      "results": [
+        {
+          "id": 149990,
+          "name": "Poached Salmon",
+          "minutes": 15,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 418368,
+          "name": "Broiled Salmon Dijon",
+          "minutes": 30,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 297755,
+          "name": "Oriental Salmon",
+          "minutes": 40,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 35943,
+          "name": "Broiled Salmon Fillet with Mustard Dill Sauce",
+          "minutes": 30,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 78690,
+          "name": "BBQ Salmon with Cucumber Dill Sauce",
+          "minutes": 40,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        }
+      ]
+    },
+    {
+      "query": "vegetarian chili with black beans",
+      "expected": {
+        "include_ingredients": [
+          "black beans"
+        ],
+        "exclude_ingredients": [],
+        "diet": "vegetarian",
+        "max_minutes": null,
+        "free_text": "chili"
+      },
+      "parsed": {
+        "include_ingredients": [
+          "black beans"
+        ],
+        "exclude_ingredients": [],
+        "diet": "vegetarian",
+        "max_minutes": null,
+        "free_text": "chili"
+      },
+      "parsed_by": "llm",
+      "parse_matches": {
+        "diet": true,
+        "max_minutes": true,
+        "exclude_ingredients": true
+      },
+      "candidates": 3400,
+      "results": [
+        {
+          "id": 380860,
+          "name": "Sweet and Savory Campsite Black Bean Salad",
+          "minutes": 15,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 89066,
+          "name": "Black Bean and Chocolate Chili",
+          "minutes": 35,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 312510,
+          "name": "Chipotle Black Bean Chili",
+          "minutes": 30,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 498269,
+          "name": "Spicy Banana Dip With Black Beans",
+          "minutes": 15,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 223152,
+          "name": "The Perfect Black Bean Dip",
+          "minutes": 10,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        }
+      ]
+    },
+    {
+      "query": "dairy-free banana smoothie in 10 minutes",
+      "expected": {
+        "include_ingredients": [
+          "banana"
+        ],
+        "exclude_ingredients": [],
+        "diet": "dairy-free",
+        "max_minutes": 10,
+        "free_text": "smoothie"
+      },
+      "parsed": {
+        "include_ingredients": [
+          "banana"
+        ],
+        "exclude_ingredients": [
+          "dairy"
+        ],
+        "diet": "dairy-free",
+        "max_minutes": 10,
+        "free_text": "smoothie"
+      },
+      "parsed_by": "llm",
+      "parse_matches": {
+        "diet": true,
+        "max_minutes": true,
+        "exclude_ingredients": false
+      },
+      "candidates": 13,
+      "results": [
+        {
+          "id": 375380,
+          "name": "Healthy Banana Peanut Butter Pudding/Topping",
+          "minutes": 2,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 204105,
+          "name": "Antioxidant Fruit Salad - Nigella Lawson",
+          "minutes": 10,
+          "violations": [],
+          "missing_ingredients": [
+            "banana"
+          ],
+          "diet_notes": []
+        },
+        {
+          "id": 146939,
+          "name": "Anytime of Year Spring Clean Juice",
+          "minutes": 5,
+          "violations": [],
+          "missing_ingredients": [
+            "banana"
+          ],
+          "diet_notes": []
+        },
+        {
+          "id": 444843,
+          "name": "Nutritious Peanut Butter Spread",
+          "minutes": 10,
+          "violations": [],
+          "missing_ingredients": [
+            "banana"
+          ],
+          "diet_notes": []
+        },
+        {
+          "id": 278690,
+          "name": "Creamy Veggie Dip - Dairy Free",
+          "minutes": 10,
+          "violations": [],
+          "missing_ingredients": [
+            "banana"
+          ],
+          "diet_notes": []
+        }
+      ]
+    }
+  ]
+}

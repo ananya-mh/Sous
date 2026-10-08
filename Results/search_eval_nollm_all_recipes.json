@@ -1,0 +1,541 @@
+{
+  "used_gemini": false,
+  "summary": {
+    "queries": 10,
+    "results_returned": 50,
+    "result_slots": 50,
+    "hard_constraints_satisfied": 50,
+    "hard_constraint_rate": 1.0,
+    "include_queries": 6,
+    "include_results_returned": 30,
+    "include_all_present": 22,
+    "include_all_rate": 0.7333333333333333
+  },
+  "queries": [
+    {
+      "query": "vegetarian pasta under 30 minutes, no mushrooms",
+      "parsed": {
+        "include_ingredients": [],
+        "exclude_ingredients": [
+          "mushrooms"
+        ],
+        "diet": "vegetarian",
+        "max_minutes": 30,
+        "free_text": "pasta"
+      },
+      "parse_matches": null,
+      "candidates": 1478,
+      "results": [
+        {
+          "id": 479067,
+          "name": "No Pasta Anti Pasta",
+          "minutes": 15,
+          "violations": [],
+          "missing_ingredients": []
+        },
+        {
+          "id": 496438,
+          "name": "Perfect Pasta",
+          "minutes": 30,
+          "violations": [],
+          "missing_ingredients": []
+        },
+        {
+          "id": 85118,
+          "name": "2- Step Pasta Sensation",
+          "minutes": 25,
+          "violations": [],
+          "missing_ingredients": []
+        },
+        {
+          "id": 202160,
+          "name": "Pasta With Creamy Red Pepper Sauce",
+          "minutes": 30,
+          "violations": [],
+          "missing_ingredients": []
+        },
+        {
+          "id": 266055,
+          "name": "Situation Critical Pasta... in the Dub P",
+          "minutes": 23,
+          "violations": [],
+          "missing_ingredients": []
+        }
+      ]
+    },
+    {
+      "query": "quick vegan curry in under 45 minutes",
+      "parsed": {
+        "include_ingredients": [],
+        "exclude_ingredients": [],
+        "diet": "vegan",
+        "max_minutes": 45,
+        "free_text": "curry"
+      },
+      "parse_matches": null,
+      "candidates": 123,
+      "results": [
+        {
+          "id": 66225,
+          "name": "Red-Curried Vegetables with Barley Rice",
+          "minutes": 30,
+          "violations": [],
+          "missing_ingredients": []
+        },
+        {
+          "id": 20853,
+          "name": "Molasses Carrot Curry",
+          "minutes": 45,
+          "violations": [],
+          "missing_ingredients": []
+        },
+        {
+          "id": 59446,
+          "name": "Nigella Lawson Caramelized Onion & Lentil Pilaf",
+          "minutes": 40,
+          "violations": [],
+          "missing_ingredients": []
+        },
+        {
+          "id": 96390,
+          "name": "Jasmine Tea for the Beautiful You",
+          "minutes": 20,
+          "violations": [],
+          "missing_ingredients": []
+        },
+        {
+          "id": 411582,
+          "name": "Harissa-Spiked Houmous",
+          "minutes": 10,
+          "violations": [],
+          "missing_ingredients": []
+        }
+      ]
+    },
+    {
+      "query": "gluten-free chocolate dessert",
+      "parsed": {
+        "include_ingredients": [],
+        "exclude_ingredients": [],
+        "diet": "gluten-free",
+        "max_minutes": null,
+        "free_text": "chocolate dessert"
+      },
+      "parse_matches": null,
+      "candidates": 3202,
+      "results": [
+        {
+          "id": 3556,
+          "name": "Chocolate Lovers Favorite Cake",
+          "minutes": 70,
+          "violations": [],
+          "missing_ingredients": []
+        },
+        {
+          "id": 180736,
+          "name": "Chocolate Sauce for Fruit or Ice Cream",
+          "minutes": 5,
+          "violations": [],
+          "missing_ingredients": []
+        },
+        {
+          "id": 454674,
+          "name": "Kalter Hund (German Chocolate Dessert) - Christmas Version",
+          "minutes": 22,
+          "violations": [],
+          "missing_ingredients": []
+        },
+        {
+          "id": 445246,
+          "name": "Chocolate Jody - Cake from Heaven",
+          "minutes": 40,
+          "violations": [],
+          "missing_ingredients": []
+        },
+        {
+          "id": 320768,
+          "name": "Chocolate Raspberry Chambord Shake",
+          "minutes": 5,
+          "violations": [],
+          "missing_ingredients": []
+        }
+      ]
+    },
+    {
+      "query": "chicken dinner with no dairy",
+      "parsed": {
+        "include_ingredients": [
+          "chicken"
+        ],
+        "exclude_ingredients": [],
+        "diet": "dairy-free",
+        "max_minutes": null,
+        "free_text": "dinner"
+      },
+      "parse_matches": null,
+      "candidates": 72,
+      "results": [
+        {
+          "id": 29476,
+          "name": "Spicy Grilled Chicken Wings",
+          "minutes": 740,
+          "violations": [],
+          "missing_ingredients": []
+        },
+        {
+          "id": 263096,
+          "name": "Herb Baked Chicken Breasts",
+          "minutes": 50,
+          "violations": [],
+          "missing_ingredients": []
+        },
+        {
+          "id": 91588,
+          "name": "Greek Island Chicken",
+          "minutes": 40,
+          "violations": [],
+          "missing_ingredients": []
+        },
+        {
+          "id": 398322,
+          "name": "Chicken Patia",
+          "minutes": 80,
+          "violations": [],
+          "missing_ingredients": []
+        },
+        {
+          "id": 80974,
+          "name": "Chinese Noodle Salad",
+          "minutes": 15,
+          "violations": [],
+          "missing_ingredients": []
+        }
+      ]
+    },
+    {
+      "query": "low-carb breakfast with eggs under 20 minutes",
+      "parsed": {
+        "include_ingredients": [
+          "eggs"
+        ],
+        "exclude_ingredients": [],
+        "diet": "low-carb",
+        "max_minutes": 20,
+        "free_text": "breakfast"
+      },
+      "parse_matches": null,
+      "candidates": 57,
+      "results": [
+        {
+          "id": 513062,
+          "name": "Eggs in Clouds",
+          "minutes": 11,
+          "violations": [],
+          "missing_ingredients": []
+        },
+        {
+          "id": 181540,
+          "name": "Veggie Cheddar Scrambled Eggs",
+          "minutes": 15,
+          "violations": [],
+          "missing_ingredients": []
+        },
+        {
+          "id": 43160,
+          "name": "Smoky Poached Eggs",
+          "minutes": 9,
+          "violations": [],
+          "missing_ingredients": []
+        },
+        {
+          "id": 499285,
+          "name": "Egg Yolk Sauce",
+          "minutes": 14,
+          "violations": [],
+          "missing_ingredients": []
+        },
+        {
+          "id": 423582,
+          "name": "A Villager's Eggs (Avgo Khoriatiki)",
+          "minutes": 10,
+          "violations": [],
+          "missing_ingredients": []
+        }
+      ]
+    },
+    {
+      "query": "nut-free cookies",
+      "parsed": {
+        "include_ingredients": [],
+        "exclude_ingredients": [],
+        "diet": "nut-free",
+        "max_minutes": null,
+        "free_text": "cookies"
+      },
+      "parse_matches": null,
+      "candidates": 4521,
+      "results": [
+        {
+          "id": 312259,
+          "name": "Any Flavor Cookies....similar to Lofthouse Cookies / Copycat",
+          "minutes": 13,
+          "violations": [],
+          "missing_ingredients": []
+        },
+        {
+          "id": 61760,
+          "name": "Da Cookies",
+          "minutes": 20,
+          "violations": [],
+          "missing_ingredients": []
+        },
+        {
+          "id": 277389,
+          "name": "The \"only\" Power Cookies",
+          "minutes": 29,
+          "violations": [],
+          "missing_ingredients": []
+        },
+        {
+          "id": 315519,
+          "name": "Big Chip Cookies",
+          "minutes": 20,
+          "violations": [],
+          "missing_ingredients": []
+        },
+        {
+          "id": 410419,
+          "name": "Thick and Chewy Chocolate Chip Cookies",
+          "minutes": 30,
+          "violations": [],
+          "missing_ingredients": []
+        }
+      ]
+    },
+    {
+      "query": "soup with lentils and carrots, no onions",
+      "parsed": {
+        "include_ingredients": [
+          "lentils",
+          "carrots"
+        ],
+        "exclude_ingredients": [
+          "onions"
+        ],
+        "diet": null,
+        "max_minutes": null,
+        "free_text": "soup"
+      },
+      "parse_matches": null,
+      "candidates": 3319,
+      "results": [
+        {
+          "id": 333131,
+          "name": "Bean, Carrot and Leek Soup",
+          "minutes": 50,
+          "violations": [],
+          "missing_ingredients": [
+            "lentils"
+          ]
+        },
+        {
+          "id": 209185,
+          "name": "Steamed Salmon With Leeks & Lentils",
+          "minutes": 20,
+          "violations": [],
+          "missing_ingredients": [
+            "carrots"
+          ]
+        },
+        {
+          "id": 511214,
+          "name": "Sweet Coconut Lentil Stew",
+          "minutes": 30,
+          "violations": [],
+          "missing_ingredients": [
+            "carrots"
+          ]
+        },
+        {
+          "id": 303716,
+          "name": "Roasted Green Lentils With Tomatoes",
+          "minutes": 130,
+          "violations": [],
+          "missing_ingredients": [
+            "carrots"
+          ]
+        },
+        {
+          "id": 296194,
+          "name": "Lentils With Sun-Dried Tomatoes and Feta",
+          "minutes": 30,
+          "violations": [],
+          "missing_ingredients": [
+            "carrots"
+          ]
+        }
+      ]
+    },
+    {
+      "query": "salmon under 40 minutes without garlic",
+      "parsed": {
+        "include_ingredients": [
+          "salmon"
+        ],
+        "exclude_ingredients": [
+          "garlic"
+        ],
+        "diet": null,
+        "max_minutes": 40,
+        "free_text": ""
+      },
+      "parse_matches": null,
+      "candidates": 2042,
+      "results": [
+        {
+          "id": 386391,
+          "name": "The Best and Easiest Baked Salmon Fish Ever!",
+          "minutes": 25,
+          "violations": [],
+          "missing_ingredients": []
+        },
+        {
+          "id": 503144,
+          "name": "Salmon Steak Tartare (Lohitartar)",
+          "minutes": 20,
+          "violations": [],
+          "missing_ingredients": []
+        },
+        {
+          "id": 393980,
+          "name": "Pan-Seared Salmon With Dill Tartar Sauce",
+          "minutes": 15,
+          "violations": [],
+          "missing_ingredients": []
+        },
+        {
+          "id": 265122,
+          "name": "Salmon Piquant for 2",
+          "minutes": 40,
+          "violations": [],
+          "missing_ingredients": []
+        },
+        {
+          "id": 172283,
+          "name": "Salmon Spread",
+          "minutes": 10,
+          "violations": [],
+          "missing_ingredients": []
+        }
+      ]
+    },
+    {
+      "query": "vegetarian chili with black beans",
+      "parsed": {
+        "include_ingredients": [
+          "black beans"
+        ],
+        "exclude_ingredients": [],
+        "diet": "vegetarian",
+        "max_minutes": null,
+        "free_text": "chili"
+      },
+      "parse_matches": null,
+      "candidates": 3302,
+      "results": [
+        {
+          "id": 350971,
+          "name": "Crispy Black Bean Tacos With Feta & Cabbage Slaw",
+          "minutes": 25,
+          "violations": [],
+          "missing_ingredients": []
+        },
+        {
+          "id": 446342,
+          "name": "Corn and Black Bean Salsa With a Kick",
+          "minutes": 15,
+          "violations": [],
+          "missing_ingredients": []
+        },
+        {
+          "id": 426958,
+          "name": "Quick Cowboy Caviar",
+          "minutes": 10,
+          "violations": [],
+          "missing_ingredients": []
+        },
+        {
+          "id": 79181,
+          "name": "Chili Bean Wrap",
+          "minutes": 41,
+          "violations": [],
+          "missing_ingredients": []
+        },
+        {
+          "id": 237524,
+          "name": "Black Bean Dip",
+          "minutes": 40,
+          "violations": [],
+          "missing_ingredients": []
+        }
+      ]
+    },
+    {
+      "query": "dairy-free banana smoothie in 10 minutes",
+      "parsed": {
+        "include_ingredients": [
+          "banana"
+        ],
+        "exclude_ingredients": [],
+        "diet": "dairy-free",
+        "max_minutes": 10,
+        "free_text": "smoothie"
+      },
+      "parse_matches": null,
+      "candidates": 11,
+      "results": [
+        {
+          "id": 288597,
+          "name": "Nutty Apple Banana Blast",
+          "minutes": 5,
+          "violations": [],
+          "missing_ingredients": []
+        },
+        {
+          "id": 123267,
+          "name": "Almond Smoothie - Steak Shake",
+          "minutes": 5,
+          "violations": [],
+          "missing_ingredients": []
+        },
+        {
+          "id": 393666,
+          "name": "Kiwi, Strawberry and Grape Juice.",
+          "minutes": 5,
+          "violations": [],
+          "missing_ingredients": [
+            "banana"
+          ]
+        },
+        {
+          "id": 392870,
+          "name": "Sesame (Tahini) Milk (Dairy Free)",
+          "minutes": 6,
+          "violations": [],
+          "missing_ingredients": [
+            "banana"
+          ]
+        },
+        {
+          "id": 339893,
+          "name": "Sara's Strawberry Daiquiri",
+          "minutes": 2,
+          "violations": [],
+          "missing_ingredients": [
+            "banana"
+          ]
+        }
+      ]
+    }
+  ]
+}

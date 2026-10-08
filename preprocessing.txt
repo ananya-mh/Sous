@@ -1,0 +1,47 @@
+Data -> Preprocessing -> Model -> Post-processing -> Business Logic.
+2 Types of Model to use (CRF,BERT)
+
+Phase 1. Take the CRF Raw data from New york times Ingrediant Parser Dataset
+Phase 2. Preprocess it to convert to our specific format
+         ->in the NYT Dataset there is no tagging and anotations just each rows with
+         the data so now we have to tag it and make it ready for the model
+
+        from this :-
+        input_text,qty,unit,name,comment
+        1 cup white flour,1,cup,white flour,
+
+        to this :-
+        Token (Word),Label (Tag),Meaning
+        1,B-AMT,Beginning of Amount
+        cup,B-UNIT,Beginning of Unit
+        white,B-NAME,Beginning of Name
+        flour,I-NAME,Inside of Name (continuation)
+
+Example :
+1 cup chopped tomato -  1->B-AMT,cup->B-UNIT,chopped->B-DESC,chopped->B-DESC,tomato->B-NAME
+
+Issue in Phase 2:
+the raw dataset set does not have properly taged dataset and BIO tags can be mismatched
+so we need to manually tagging them for proper training
+
+B-AMT: Start of an Amount (e.g., "1").
+I-AMT: Continuation of an Amount (e.g., "/2" in "1/2").
+B-UNIT: Start of a Unit (e.g., "cup").
+I-UNIT: Continuation of a Unit (e.g., "ounce" in "fluid ounce").
+B-NAME: Start of the Ingredient Name (e.g., "olive").
+I-NAME: Continuation of the Ingredient Name (e.g., "oil").
+B-DESC: Start of a Descriptor/Adjective (e.g., "chopped").
+I-DESC: Continuation of a Descriptor (e.g., "chopped" in "finely chopped").
+O: Outside (Punctuation, "and", "or", irrelevant words).
+
+Visual Example
+Sentence - "1 1/2 fluid ounces extra virgin olive oil"
+Word    Tag     Reason
+1,      B-AMT,  Starts the amount.
+1/2,    I-AMT,  Continues the amount.
+fluid,  B-UNIT, Starts the unit phrase.
+ounces, I-UNIT, Continues the unit phrase.
+extra,  B-NAME, Starts the ingredient name.
+virgin, I-NAME, Continues the name.
+olive,  I-NAME, Continues the name.
+oil,    I-NAME, Continues the name.

@@ -1,0 +1,1155 @@
+{
+  "parser": "fallback",
+  "llm_model": null,
+  "query_file": "scripts/eval_queries_heldout.json",
+  "summary": {
+    "queries": 15,
+    "results_returned": 75,
+    "result_slots": 75,
+    "hard_constraints_satisfied": 36,
+    "hard_constraint_rate": 0.48,
+    "include_queries": 6,
+    "include_results_returned": 30,
+    "include_all_present": 15,
+    "include_all_rate": 0.5,
+    "queries_parsed_correctly": 4,
+    "fallback_used": 15
+  },
+  "queries": [
+    {
+      "query": "quick weeknight dinner with chicken thighs, nothing over 40 min",
+      "expected": {
+        "include_ingredients": [
+          "chicken thigh"
+        ],
+        "exclude_ingredients": [],
+        "diet": null,
+        "max_minutes": 40,
+        "free_text": "weeknight dinner"
+      },
+      "parsed": {
+        "include_ingredients": [],
+        "exclude_ingredients": [],
+        "diet": null,
+        "max_minutes": null,
+        "free_text": "quick weeknight dinner with chicken thighs, nothing over 40 min"
+      },
+      "parsed_by": "fallback",
+      "parse_matches": {
+        "diet": true,
+        "max_minutes": false,
+        "exclude_ingredients": true
+      },
+      "candidates": 2823,
+      "results": [
+        {
+          "id": 450517,
+          "name": "Slow Cooked BBQ Chicken",
+          "minutes": 245,
+          "violations": [
+            "max_minutes"
+          ],
+          "missing_ingredients": [
+            "chicken thigh"
+          ],
+          "diet_notes": []
+        },
+        {
+          "id": 460218,
+          "name": "Braised Chicken Thighs With Bell Peppers, Olives and Tomatoes",
+          "minutes": 60,
+          "violations": [
+            "max_minutes"
+          ],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 486236,
+          "name": "Basil Chicken With Feta (Slow Cooker)",
+          "minutes": 380,
+          "violations": [
+            "max_minutes"
+          ],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 244817,
+          "name": "Weeknight Hawaiian Chicken Dinner",
+          "minutes": 60,
+          "violations": [
+            "max_minutes"
+          ],
+          "missing_ingredients": [
+            "chicken thigh"
+          ],
+          "diet_notes": []
+        },
+        {
+          "id": 159851,
+          "name": "Jamaican Chicken Thighs",
+          "minutes": 20,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        }
+      ]
+    },
+    {
+      "query": "i'm vegetarian and hate mushrooms, want something cozy for a rainy day",
+      "expected": {
+        "include_ingredients": [],
+        "exclude_ingredients": [
+          "mushroom"
+        ],
+        "diet": "vegetarian",
+        "max_minutes": null,
+        "free_text": "cozy"
+      },
+      "parsed": {
+        "include_ingredients": [],
+        "exclude_ingredients": [],
+        "diet": "vegetarian",
+        "max_minutes": null,
+        "free_text": "i'm and hate mushrooms, want something cozy for a rainy day"
+      },
+      "parsed_by": "fallback",
+      "parse_matches": {
+        "diet": true,
+        "max_minutes": true,
+        "exclude_ingredients": false
+      },
+      "candidates": 3335,
+      "results": [
+        {
+          "id": 32074,
+          "name": "Mushroomelettes",
+          "minutes": 35,
+          "violations": [
+            "exclude_ingredients"
+          ],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 165523,
+          "name": "Quick Cream of Mushroom Soup",
+          "minutes": 15,
+          "violations": [
+            "exclude_ingredients"
+          ],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 200255,
+          "name": "Creamed Mushrooms",
+          "minutes": 20,
+          "violations": [
+            "exclude_ingredients"
+          ],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 66657,
+          "name": "Homemade Mushroom Soup",
+          "minutes": 37,
+          "violations": [
+            "exclude_ingredients"
+          ],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 281731,
+          "name": "Mushroom Quesadillas, Healthy",
+          "minutes": 30,
+          "violations": [
+            "exclude_ingredients"
+          ],
+          "missing_ingredients": [],
+          "diet_notes": []
+        }
+      ]
+    },
+    {
+      "query": "dessert my celiac friend can eat",
+      "expected": {
+        "include_ingredients": [],
+        "exclude_ingredients": [],
+        "diet": "gluten-free",
+        "max_minutes": null,
+        "free_text": "dessert"
+      },
+      "parsed": {
+        "include_ingredients": [],
+        "exclude_ingredients": [],
+        "diet": null,
+        "max_minutes": null,
+        "free_text": "dessert my celiac friend can eat"
+      },
+      "parsed_by": "fallback",
+      "parse_matches": {
+        "diet": false,
+        "max_minutes": true,
+        "exclude_ingredients": true
+      },
+      "candidates": 2928,
+      "results": [
+        {
+          "id": 159091,
+          "name": "Grandma's Pudding Cake",
+          "minutes": 55,
+          "violations": [
+            "diet"
+          ],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 125028,
+          "name": "Bulgur Milk Pudding (Tasty and a Constipation Cure!)",
+          "minutes": 39,
+          "violations": [
+            "diet"
+          ],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 83443,
+          "name": "Rice Porridge With Raisin Sauce",
+          "minutes": 70,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 281386,
+          "name": "Good-For-You Cake",
+          "minutes": 30,
+          "violations": [
+            "diet"
+          ],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 369583,
+          "name": "Chorizo Corn Pudding",
+          "minutes": 90,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        }
+      ]
+    },
+    {
+      "query": "something with the leftover rice and eggs in my fridge",
+      "expected": {
+        "include_ingredients": [
+          "rice",
+          "egg"
+        ],
+        "exclude_ingredients": [],
+        "diet": null,
+        "max_minutes": null,
+        "free_text": ""
+      },
+      "parsed": {
+        "include_ingredients": [],
+        "exclude_ingredients": [],
+        "diet": null,
+        "max_minutes": null,
+        "free_text": "something with the leftover rice and eggs in my fridge"
+      },
+      "parsed_by": "fallback",
+      "parse_matches": {
+        "diet": true,
+        "max_minutes": true,
+        "exclude_ingredients": true
+      },
+      "candidates": 5000,
+      "results": [
+        {
+          "id": 83443,
+          "name": "Rice Porridge With Raisin Sauce",
+          "minutes": 70,
+          "violations": [],
+          "missing_ingredients": [
+            "egg"
+          ],
+          "diet_notes": []
+        },
+        {
+          "id": 97087,
+          "name": "Japanese Sushi Eggs",
+          "minutes": 130,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 155636,
+          "name": "Breakfast Brown Rice",
+          "minutes": 3,
+          "violations": [],
+          "missing_ingredients": [
+            "egg"
+          ],
+          "diet_notes": []
+        },
+        {
+          "id": 122299,
+          "name": "All-Star Breakfast Rice",
+          "minutes": 18,
+          "violations": [],
+          "missing_ingredients": [
+            "egg"
+          ],
+          "diet_notes": []
+        },
+        {
+          "id": 42594,
+          "name": "Old Fashioned Rice Pudding",
+          "minutes": 70,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        }
+      ]
+    },
+    {
+      "query": "lunch ideas without dairy that take half an hour or less",
+      "expected": {
+        "include_ingredients": [],
+        "exclude_ingredients": [],
+        "diet": "dairy-free",
+        "max_minutes": 30,
+        "free_text": "lunch"
+      },
+      "parsed": {
+        "include_ingredients": [],
+        "exclude_ingredients": [],
+        "diet": "dairy-free",
+        "max_minutes": null,
+        "free_text": "lunch ideas that take half an hour or less"
+      },
+      "parsed_by": "fallback",
+      "parse_matches": {
+        "diet": true,
+        "max_minutes": false,
+        "exclude_ingredients": true
+      },
+      "candidates": 37,
+      "results": [
+        {
+          "id": 142291,
+          "name": "Get Well Chicken Noodle Soup",
+          "minutes": 150,
+          "violations": [
+            "max_minutes"
+          ],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 155496,
+          "name": "30 Minute Baked Potato",
+          "minutes": 25,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 126183,
+          "name": "Energizing (Everyday) Soup",
+          "minutes": 17,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 204921,
+          "name": "Cabbage Soup",
+          "minutes": 75,
+          "violations": [
+            "max_minutes"
+          ],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 195094,
+          "name": "Canadian Creton by Jerry",
+          "minutes": 120,
+          "violations": [
+            "max_minutes"
+          ],
+          "missing_ingredients": [],
+          "diet_notes": []
+        }
+      ]
+    },
+    {
+      "query": "spicy vegan curry, no coconut",
+      "expected": {
+        "include_ingredients": [],
+        "exclude_ingredients": [
+          "coconut"
+        ],
+        "diet": "vegan",
+        "max_minutes": null,
+        "free_text": "spicy curry"
+      },
+      "parsed": {
+        "include_ingredients": [],
+        "exclude_ingredients": [
+          "coconut"
+        ],
+        "diet": "vegan",
+        "max_minutes": null,
+        "free_text": "spicy curry"
+      },
+      "parsed_by": "fallback",
+      "parse_matches": {
+        "diet": true,
+        "max_minutes": true,
+        "exclude_ingredients": true
+      },
+      "candidates": 201,
+      "results": [
+        {
+          "id": 15743,
+          "name": "Tehina (Sesame Sauce)",
+          "minutes": 5,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 532257,
+          "name": "Japanese Curry Powder",
+          "minutes": 5,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 420506,
+          "name": "Spicy Orange Salad, Moroccan Style",
+          "minutes": 10,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 389272,
+          "name": "Thai Sweet Chili Sauce for Spring Rolls or Fried Tofu",
+          "minutes": 4,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 23146,
+          "name": "Mango Chutney",
+          "minutes": 65,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        }
+      ]
+    },
+    {
+      "query": "kid-friendly pasta, my son is allergic to peanuts",
+      "expected": {
+        "include_ingredients": [],
+        "exclude_ingredients": [
+          "peanut"
+        ],
+        "diet": "nut-free",
+        "max_minutes": null,
+        "free_text": "kid-friendly pasta"
+      },
+      "parsed": {
+        "include_ingredients": [],
+        "exclude_ingredients": [],
+        "diet": null,
+        "max_minutes": null,
+        "free_text": "kid-friendly pasta, my son is allergic to peanuts"
+      },
+      "parsed_by": "fallback",
+      "parse_matches": {
+        "diet": false,
+        "max_minutes": true,
+        "exclude_ingredients": false
+      },
+      "candidates": 4380,
+      "results": [
+        {
+          "id": 289493,
+          "name": "Edible Peanut Butter Dough",
+          "minutes": 5,
+          "violations": [
+            "exclude_ingredients",
+            "diet"
+          ],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 350809,
+          "name": "Thermomix Peanut Butter",
+          "minutes": 12,
+          "violations": [
+            "exclude_ingredients",
+            "diet"
+          ],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 156928,
+          "name": "Kid's Monkey Spread",
+          "minutes": 5,
+          "violations": [
+            "exclude_ingredients",
+            "diet"
+          ],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 234246,
+          "name": "Peanut Noodles",
+          "minutes": 30,
+          "violations": [
+            "exclude_ingredients",
+            "diet"
+          ],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 51085,
+          "name": "Eggless Pasta",
+          "minutes": 17,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        }
+      ]
+    },
+    {
+      "query": "salmon recipe under an hour",
+      "expected": {
+        "include_ingredients": [
+          "salmon"
+        ],
+        "exclude_ingredients": [],
+        "diet": null,
+        "max_minutes": 60,
+        "free_text": ""
+      },
+      "parsed": {
+        "include_ingredients": [],
+        "exclude_ingredients": [],
+        "diet": null,
+        "max_minutes": null,
+        "free_text": "salmon recipe under an hour"
+      },
+      "parsed_by": "fallback",
+      "parse_matches": {
+        "diet": true,
+        "max_minutes": false,
+        "exclude_ingredients": true
+      },
+      "candidates": 3672,
+      "results": [
+        {
+          "id": 397400,
+          "name": "Easy Broiled Salmon",
+          "minutes": 16,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 297842,
+          "name": "Asian Flavored Salmon",
+          "minutes": 31,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 149990,
+          "name": "Poached Salmon",
+          "minutes": 15,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 246008,
+          "name": "Easy Baked Salmon",
+          "minutes": 45,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 418368,
+          "name": "Broiled Salmon Dijon",
+          "minutes": 30,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        }
+      ]
+    },
+    {
+      "query": "low carb breakfast w/ eggs + spinach",
+      "expected": {
+        "include_ingredients": [
+          "egg",
+          "spinach"
+        ],
+        "exclude_ingredients": [],
+        "diet": "low-carb",
+        "max_minutes": null,
+        "free_text": "breakfast"
+      },
+      "parsed": {
+        "include_ingredients": [],
+        "exclude_ingredients": [],
+        "diet": "low-carb",
+        "max_minutes": null,
+        "free_text": "breakfast w/ eggs + spinach"
+      },
+      "parsed_by": "fallback",
+      "parse_matches": {
+        "diet": true,
+        "max_minutes": true,
+        "exclude_ingredients": true
+      },
+      "candidates": 228,
+      "results": [
+        {
+          "id": 474356,
+          "name": "Healthy Veggie Scramble",
+          "minutes": 10,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 114996,
+          "name": "Scrambled Eggs With Avocado and Cheese",
+          "minutes": 20,
+          "violations": [],
+          "missing_ingredients": [
+            "spinach"
+          ],
+          "diet_notes": []
+        },
+        {
+          "id": 15248,
+          "name": "Onion Cheese Omelet",
+          "minutes": 15,
+          "violations": [],
+          "missing_ingredients": [
+            "spinach"
+          ],
+          "diet_notes": []
+        },
+        {
+          "id": 140054,
+          "name": "Spinach & Chicken Roulade",
+          "minutes": 75,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 354371,
+          "name": "Easter Hard Boiled Eggs",
+          "minutes": 12,
+          "violations": [],
+          "missing_ingredients": [
+            "spinach"
+          ],
+          "diet_notes": []
+        }
+      ]
+    },
+    {
+      "query": "easy soup, skip the onions and garlic",
+      "expected": {
+        "include_ingredients": [],
+        "exclude_ingredients": [
+          "onion",
+          "garlic"
+        ],
+        "diet": null,
+        "max_minutes": null,
+        "free_text": "easy soup"
+      },
+      "parsed": {
+        "include_ingredients": [],
+        "exclude_ingredients": [],
+        "diet": null,
+        "max_minutes": null,
+        "free_text": "easy soup, skip the onions and garlic"
+      },
+      "parsed_by": "fallback",
+      "parse_matches": {
+        "diet": true,
+        "max_minutes": true,
+        "exclude_ingredients": false
+      },
+      "candidates": 2866,
+      "results": [
+        {
+          "id": 226007,
+          "name": "Easy French Onion Soup",
+          "minutes": 60,
+          "violations": [
+            "exclude_ingredients"
+          ],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 402659,
+          "name": "Onion Soup",
+          "minutes": 70,
+          "violations": [
+            "exclude_ingredients"
+          ],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 473249,
+          "name": "Homemade Vegetable Soup in Under 40 Minutes",
+          "minutes": 50,
+          "violations": [
+            "exclude_ingredients"
+          ],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 479090,
+          "name": "Super Fast, Super Easy Mashed Potato Soup",
+          "minutes": 10,
+          "violations": [
+            "exclude_ingredients"
+          ],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 126183,
+          "name": "Energizing (Everyday) Soup",
+          "minutes": 17,
+          "violations": [
+            "exclude_ingredients"
+          ],
+          "missing_ingredients": [],
+          "diet_notes": []
+        }
+      ]
+    },
+    {
+      "query": "keto dinner that isn't chicken again",
+      "expected": {
+        "include_ingredients": [],
+        "exclude_ingredients": [
+          "chicken"
+        ],
+        "diet": "low-carb",
+        "max_minutes": null,
+        "free_text": "dinner"
+      },
+      "parsed": {
+        "include_ingredients": [],
+        "exclude_ingredients": [],
+        "diet": "keto",
+        "max_minutes": null,
+        "free_text": "dinner that isn't chicken again"
+      },
+      "parsed_by": "fallback",
+      "parse_matches": {
+        "diet": false,
+        "max_minutes": true,
+        "exclude_ingredients": false
+      },
+      "candidates": 151,
+      "results": [
+        {
+          "id": 290412,
+          "name": "Fiesta Chicken (Slow Cooker)",
+          "minutes": 255,
+          "violations": [
+            "exclude_ingredients"
+          ],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 64835,
+          "name": "Chicken With Creamy Sun-Dried Tomato Sauce",
+          "minutes": 25,
+          "violations": [
+            "exclude_ingredients"
+          ],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 196387,
+          "name": "Lemon Pepper Chicken",
+          "minutes": 90,
+          "violations": [
+            "exclude_ingredients"
+          ],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 220979,
+          "name": "Tuscan-Style Peppered Chicken",
+          "minutes": 40,
+          "violations": [
+            "exclude_ingredients"
+          ],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 120791,
+          "name": "Barbecued Oven Chicken",
+          "minutes": 65,
+          "violations": [
+            "exclude_ingredients"
+          ],
+          "missing_ingredients": [],
+          "diet_notes": []
+        }
+      ]
+    },
+    {
+      "query": "need a 20 min snack with chickpeas",
+      "expected": {
+        "include_ingredients": [
+          "chickpea"
+        ],
+        "exclude_ingredients": [],
+        "diet": null,
+        "max_minutes": 20,
+        "free_text": "snack"
+      },
+      "parsed": {
+        "include_ingredients": [],
+        "exclude_ingredients": [],
+        "diet": null,
+        "max_minutes": null,
+        "free_text": "need a 20 min snack with chickpeas"
+      },
+      "parsed_by": "fallback",
+      "parse_matches": {
+        "diet": true,
+        "max_minutes": false,
+        "exclude_ingredients": true
+      },
+      "candidates": 1391,
+      "results": [
+        {
+          "id": 248856,
+          "name": "Sauteed Chickpeas/Garbanzos",
+          "minutes": 17,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 36852,
+          "name": "Chickpea and Rice Dinner",
+          "minutes": 35,
+          "violations": [
+            "max_minutes"
+          ],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 57383,
+          "name": "Chicky-N-Cheese Sandwich",
+          "minutes": 25,
+          "violations": [
+            "max_minutes"
+          ],
+          "missing_ingredients": [
+            "chickpea"
+          ],
+          "diet_notes": []
+        },
+        {
+          "id": 311080,
+          "name": "Creamy Chickpea Curry",
+          "minutes": 65,
+          "violations": [
+            "max_minutes"
+          ],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 508872,
+          "name": "Indian Chick Peas",
+          "minutes": 30,
+          "violations": [
+            "max_minutes"
+          ],
+          "missing_ingredients": [
+            "chickpea"
+          ],
+          "diet_notes": []
+        }
+      ]
+    },
+    {
+      "query": "plant based tacos",
+      "expected": {
+        "include_ingredients": [],
+        "exclude_ingredients": [],
+        "diet": "vegan",
+        "max_minutes": null,
+        "free_text": "tacos"
+      },
+      "parsed": {
+        "include_ingredients": [],
+        "exclude_ingredients": [],
+        "diet": null,
+        "max_minutes": null,
+        "free_text": "plant based tacos"
+      },
+      "parsed_by": "fallback",
+      "parse_matches": {
+        "diet": false,
+        "max_minutes": true,
+        "exclude_ingredients": true
+      },
+      "candidates": 206,
+      "results": [
+        {
+          "id": 116601,
+          "name": "Favorite Fish Tacos",
+          "minutes": 25,
+          "violations": [
+            "diet"
+          ],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 358509,
+          "name": "Homemade Taco Seasoning Mix",
+          "minutes": 20,
+          "violations": [
+            "diet"
+          ],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 17007,
+          "name": "Carne Asada Soft Tacos",
+          "minutes": 25,
+          "violations": [
+            "diet"
+          ],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 400268,
+          "name": "Los Altos Taqueria Veggie Soft Taco",
+          "minutes": 5,
+          "violations": [
+            "diet"
+          ],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 476444,
+          "name": "Shrimp Tacos With Grilled Poblano and Avocado Salsa for Two",
+          "minutes": 30,
+          "violations": [
+            "diet"
+          ],
+          "missing_ingredients": [],
+          "diet_notes": []
+        }
+      ]
+    },
+    {
+      "query": "cookies but no eggs and no nuts",
+      "expected": {
+        "include_ingredients": [],
+        "exclude_ingredients": [
+          "egg"
+        ],
+        "diet": "nut-free",
+        "max_minutes": null,
+        "free_text": "cookies"
+      },
+      "parsed": {
+        "include_ingredients": [],
+        "exclude_ingredients": [
+          "eggs",
+          "no nuts"
+        ],
+        "diet": null,
+        "max_minutes": null,
+        "free_text": "cookies but"
+      },
+      "parsed_by": "fallback",
+      "parse_matches": {
+        "diet": false,
+        "max_minutes": true,
+        "exclude_ingredients": false
+      },
+      "candidates": 3409,
+      "results": [
+        {
+          "id": 129888,
+          "name": "Out of This World Cookies",
+          "minutes": 70,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 394521,
+          "name": "Sugee Cookies ( Olive Oil )",
+          "minutes": 25,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 209926,
+          "name": "Cheese Cookies",
+          "minutes": 25,
+          "violations": [
+            "diet"
+          ],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 272057,
+          "name": "Italian Sesame Seed Cookies",
+          "minutes": 50,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        },
+        {
+          "id": 77173,
+          "name": "Mean Chef's Classic Shortbread Cookies",
+          "minutes": 50,
+          "violations": [],
+          "missing_ingredients": [],
+          "diet_notes": []
+        }
+      ]
+    },
+    {
+      "query": "something light with zucchini or eggplant, maybe 25 minutes tops",
+      "expected": {
+        "include_ingredients": [
+          "zucchini",
+          "eggplant"
+        ],
+        "exclude_ingredients": [],
+        "diet": null,
+        "max_minutes": 25,
+        "free_text": "light"
+      },
+      "parsed": {
+        "include_ingredients": [],
+        "exclude_ingredients": [],
+        "diet": null,
+        "max_minutes": 25,
+        "free_text": "something light with zucchini or eggplant, maybe tops"
+      },
+      "parsed_by": "fallback",
+      "parse_matches": {
+        "diet": true,
+        "max_minutes": true,
+        "exclude_ingredients": true
+      },
+      "candidates": 1736,
+      "results": [
+        {
+          "id": 58576,
+          "name": "Fried Zucchini",
+          "minutes": 25,
+          "violations": [],
+          "missing_ingredients": [
+            "eggplant"
+          ],
+          "diet_notes": []
+        },
+        {
+          "id": 246207,
+          "name": "Savory Zucchini",
+          "minutes": 9,
+          "violations": [],
+          "missing_ingredients": [
+            "eggplant"
+          ],
+          "diet_notes": []
+        },
+        {
+          "id": 53389,
+          "name": "Barb's Zucchini Pancakes",
+          "minutes": 25,
+          "violations": [],
+          "missing_ingredients": [
+            "eggplant"
+          ],
+          "diet_notes": []
+        },
+        {
+          "id": 120511,
+          "name": "Roasted Lemon- Zest Zucchini With Pine Nuts",
+          "minutes": 25,
+          "violations": [],
+          "missing_ingredients": [
+            "eggplant"
+          ],
+          "diet_notes": []
+        },
+        {
+          "id": 243181,
+          "name": "Zucchini Hash Browns",
+          "minutes": 17,
+          "violations": [],
+          "missing_ingredients": [
+            "eggplant"
+          ],
+          "diet_notes": []
+        }
+      ]
+    }
+  ]
+}
